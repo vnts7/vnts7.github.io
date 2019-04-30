@@ -1,0 +1,43 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 30, 2019, 1:39:22 PM
+    Author     : 987031
+*/
+
+body{
+    background-image: url(silverware.jpg);
+    color:#404040;
+    font-size: 11pt;
+    font-family: Georgia,Garamond, serif;
+}
+a{
+    color:#A4A400;
+}
+h1,h2{
+    color:#A4A400;
+    background-color: #F0F0F0;
+    font-family: "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+    font-size: 18pt;
+    text-decoration: underline;
+}
+h1{
+    font-size: 22pt;
+    text-align: center;
+}
+abbr{
+    text-decoration: underline;
+}
+blockquote{
+    background-color: #FFFFA8;
+    font-style: italic;
+}
+blockquote div{
+    margin-top: 15px;
+}
+.a-right{
+    text-align: right;
+}
