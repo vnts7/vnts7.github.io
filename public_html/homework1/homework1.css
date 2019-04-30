@@ -10,6 +10,7 @@ and open the template in the editor.
 
 body{
     background-image: url(silverware.jpg);
+    background-attachment: fixed;
     color:#404040;
     font-size: 11pt;
     font-family: Georgia,Garamond, serif;
