@@ -33,7 +33,8 @@ h1{
 #right{
     float:right;
     width: 31.25%;
-    background:  #A2B964;
+    background: #A2B964;
+    font-family: Arial, sans-serif;
 }
 #right dl{
     margin:10pt;
