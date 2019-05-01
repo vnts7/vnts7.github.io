@@ -13,7 +13,7 @@ body{
     background-image: url(background.png)
 }
 .container{
-    width: 800px;
+    width: 808px;
     margin: 0 auto;
 }
 #header{
@@ -67,27 +67,23 @@ h1{
 }
 .col p{
     margin: 0;
+    overflow: hidden;
+}
+.col p img{
+    float: left;
+    margin-right: 5px;
 }
 .col p:nth-child(odd){
     font-weight: bold;
     background: #E8DC9B;
     border:2px solid gray;
     border-radius: 10px;
-    padding: 10px;
-    overflow: hidden;
+    padding: 8px;
     margin: 10px 0;
-}
-.col p:nth-child(odd) img{
-    float:left;
-    margin-right: 5px;
 }
 .col p:nth-child(even){
     margin-bottom: 20pt;
     line-height: 1.5;
-}
-.col p:nth-child(even) img{
-    float: left;
-    margin-right: 5px;
 }
 #footer{
     background: #A2B964;
