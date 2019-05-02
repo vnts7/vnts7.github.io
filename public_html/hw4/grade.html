@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+    <head>
+        <title>Grade Exercise</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="hw4.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <form action="http://mumstudents.org/params.php">
+            <fieldset>
+                <legend>Retrieve your grade:</legend>
+                <div class="fg">
+                    <div class="fl">Name:</div>
+                    <div class="fc"><input name="name" maxlength="16"/></div>
+                </div>
+                <div class="fg">
+                    <div class="fl">Student ID:</div>
+                    <div class="fc"><input name="id" maxlength="16"/></div>
+                </div>
+                <div class="fg">
+                    <div class="fl">Entry</div>
+                    <div class="fc">
+                        <label><input type="radio" name="entry" value="2011"/> <span>2011</span></label>
+                        <label><input type="radio" name="entry" value="2012"/> <span>2012</span></label>
+                    </div>
+                </div>
+                <div class="fg">
+                    <div class="fl">Assignment:</div>
+                    <div class="fc">
+                        <select name="assignment">
+                            <option value="Assignment1" selected>Assignment1</option>
+                            <option value="Assignment2">Assignment2</option>
+                            <option value="Assignment3">Assignment3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="fg">
+                    <div class="fl"></div>
+                    <div class="fc">
+                        <label><input name="notlying" type="checkbox"/> <span>I'm not lying</span></label>
+                    </div>
+                </div>
+                <input type="submit" value="Get Grade!" class="btn"/>
+            </fieldset>
+        </form>
+        <p><a class="wi" href="../index.html"><img src="back.gif" alt=""/>Back to home page</a></p>
+    </body>
+</html>
