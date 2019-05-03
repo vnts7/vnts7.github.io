@@ -12,6 +12,10 @@
         <servlet-name>Calculator</servlet-name>
         <servlet-class>mum.cs472.Calculator</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CalculatorV1</servlet-name>
+        <servlet-class>mum.cs472.CalculatorV1</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>SimplestServlet</servlet-name>
         <url-pattern>/Simplest</url-pattern>
@@ -22,7 +26,11 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Calculator</servlet-name>
-        <url-pattern>/calculator.html</url-pattern>
+        <url-pattern>/calculator-v2.html</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CalculatorV1</servlet-name>
+        <url-pattern>/calculator-v1</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

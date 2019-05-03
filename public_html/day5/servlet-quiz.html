@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Servlets Quiz</title>
+        <style>
+            body{
+                font-family: Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 13px;
+            }
+            p{
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Servlets Quiz</h1>
+        <ol>
+            <li>
+                What is the difference between a web server and a web container?
+                <p>Web Server or HTTP Server: A server which is capable of handling HTTP requests, sent by a client and respond back with a HTTP response.</p>
+                <p>In Java: Web Container or Servlet Container: is used to manage the components like Servlets, JSP. It is a part of the web server.</p>
+            </li>
+            <li>
+                What is a servlet?
+                <p>A servlet is a Java class that extends the capabilities of
+                    servers that host applications access by means of a
+                    request-response programming model.</p>
+            </li>
+            <li>
+                How do web servers and web containers interact with servlets?
+                <p>Web server receive the request, pass it to web container, web container create a servlet object if it's not exist, init then call servlet object service() method</p>
+            </li>
+            <li>
+                Who creates request objects?
+                <p>User's browser</p>
+            </li>
+            <li>
+                What are the states in the servlet lifecycle?
+                <p> Load
+                    . Create
+                    . Init
+                    . Service
+                    . Destroy</p>
+            </li>
+            <li>
+                Who calls init and when? 
+                <p>Servlet Container call init only once and complete before Container can call service</p>
+            </li>
+            <li>
+                Which of init, service, and doGet should you override? 
+                <p>doGet</p>
+            </li>
+            <li>
+                In what sense are servlets multi-threaded?
+                <p>service() is called for each request, each request runs in
+                    a separate thread</p>
+            </li>
+            <li>
+                What are the implications of this for servlet instance variables?
+                <p>It means servlet object handle each request in a separate thread</p>
+            </li>
+           
+        </ol>
+    </body>
+</html>
