@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>State Management Quiz</title>
+    <style>
+        body {
+            font-family: Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 13px;
+        }
+
+        p {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>State Management Quiz</h1>
+    <ol>
+        <li>Can post requests be bookmarked? What are the problems?
+            <p>No. The bookmark does not save the request body</p>
+        </li>
+        <li>What is the purpose of request dispatching?
+            <p>URL rewriting</p>
+        </li>
+        <li>What is the difference between redirect and request dispatch?
+            <p>Redirect happens in client, dispatch happens in server</p>
+        </li>
+        <li>What is an attribute ?
+            <p>An object bound into one of the three servlet API objects: HttpServletRequest,
+                HttpSession, ServletContext</p>
+        </li>
+        <li>What is the difference between attributes and parameters?
+            <p>Attribute is object and store in server, parameter is String and is sent from user</p>
+        </li>
+        <li>What are dangers of using attributes?
+            <p>Application level attributes are not thread-safe</p>
+        </li>
+        <li>What does it mean to say that http is stateless? Give an example of a stateful protocol.
+            <p>It means that after a web
+                server responds to a request, there is no "memory" of the
+                request or who sent it</p>
+            <p>an example of a stateful protocol is TCP</p>
+        </li>
+        <li>Give 5 different methods for maintaining state information (count each attribute scope as one
+            method).
+            <p>request, session, application, persistent storage, cookies, hidden fields</p>
+        </li>
+        <li>How long does a session last?
+            <p>It depends on how the server's configuration, can be configed via: session timeout, setMaxInactiveInterval or invalidate</p>
+        </li>
+        <li>What is a cookie, and how long does a cookie last?
+            <p>Cookie is a piece of information that store in browser and will be sent back to sever whenever a request is made</p>
+            <p>Can be temporary that browser removes when it closes OR</p>
+            <p>Permanent that has a max age set</p>
+        </li>
+        <li>What is the purpose of URL rewriting?
+            <p>User-friendly URL</p>
+        </li>
+        <li>Why does the request attribute report "null" for the maintaining state demo?
+            <p>Because request attribute is short term computed results to pass from
+                    one servlet to another, when server finish responds to a request, request attributes are destroyed</p>
+        </li>
+
+    </ol>
+</body>
+
+</html>
