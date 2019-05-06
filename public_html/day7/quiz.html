@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>State Management Quiz</title>
+    <style>
+        body {
+            font-family: Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 13px;
+        }
+
+        p {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>State Management Quiz</h1>
+    <ol>
+        <li>What is the main value of Java Server Pages?
+            <p>It separate display from processing, i.e., separate html from java</p>
+        </li>
+        <li>How are JSP pages related to servlets?
+            <p>JSP page will be compiled into a servlet</p>
+        </li>
+        <li>How are JSP pages related to HTML? 
+            <p>Main content of JSP is HTML code</p>
+        </li>
+        <li>Give an example of a JSP scriptlet and show how it will look in the JSP servlet .
+            <p>&lt;% count = count + 1; %&gt;</p>
+            <p>This code will run inside service method</p>
+        </li>
+        <li>Give an example of a JSP declaration and show how it will look in the JSP servlet.
+            <p>&lt;%! public void jspInit() { //your initialization code} %&gt;</p>
+            <p>This code will only perform once and help to overide jspInit function</p>
+        </li>
+        <li>Give an example of a JSP comment and show how it will look in the JSP servlet.
+            <p>&lt;%-- jsp comment --%&gt;</p>
+            <p>It's a comment, not showing when runing</p>
+        </li>
+        <li>Give an example of a JSP expression and show how it will look in the JSP servlet. 
+            <p>&lt;%= ++count %&gt;</p>
+            <p>will becomes out.print( ++count ); in service method</p>
+        </li>
+        <li>Give an example of a JSP directive and show how it will look in the JSP servlet.
+            <p>&lt;%@ page import="java.util.Date" %&gt; </p>
+            <p>This will import java.util.Date package for later use</p>
+        </li>
+        <li>Explain how an EL expression is evaluated.
+            <p>${firstThing} if firstThing is not an implicit EL object, then search page,
+                    request, session and application scopes until attribute
+                    "firstThing" is found</p>
+                    <p>${firstThing.secondThing}: if firstThing is a bean then secondThing is a property of the bean, else if firstThing is a map then secondThing is a key of the map</p>
+        </li>
+        <li>Explain how servlet attributes are involved in EL expressions.
+            <p>EL expressions will search servlet attributes (from page to request, session and application scopes) until the attribute is found</p>
+        </li>
+        <li>Explain how servlets and JSPs use request dispatch to interact.
+            <p>Have a single controller servlet that takes requests</p>
+            <p>Gets request parameters</p>
+            <p>Converts and validates them</p>
+            <p>Calls object with business logic to do processing</p>
+            <p>Forwards results to jsp page for display</p>
+        </li>
+    </ol>
+</body>
+
+</html>
