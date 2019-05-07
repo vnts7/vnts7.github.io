@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>JSP Custom Tags Quiz</title>
+    <style>
+        body {
+            font-family: Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 13px;
+        }
+
+        p {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JSP Custom Tags Quiz</h1>
+    <ol>
+        <li>Rewrite the JSP page in the first demo (forEach) to use scripting instead of the JSTL
+            forEach.
+            <pre>
+                &lt;%
+                Student[] students = (Student[])request.getAttribute("students")
+                for (int index=0; index &lt; students.size();index++) {
+                    Student student = (Student)students[index];
+                %&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;%=student.getName()%&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;%=student.getAge()%&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;% } %&gt;
+            </pre>
+        </li>
+        <li>How do custom tags relate to JSTL?
+            <p>TJTL is basically custom tags that implemented by Java its self</p>
+        </li>
+        <li>What is the role of the URI in the TLD and the taglib directive?
+            <p>URI tells JSP where to look up Descriptor file fot the tablib</p>
+        </li>
+        <li>What is a tag handler class?
+            <p>It's a Java class that implements the tag functionality</p>
+        </li>
+        <li>What is the role of attribute setters in a tag handler class? 
+            <p>They help the web container to be able to get the values from JSP and set them to tag handler object</p>
+        </li>
+        <li>What is the role of the doTag() method in a tag handler class?
+            <p>It handle the output of the tag</p>
+        </li>
+        <li> What does the operation getJspContext().getOut().write("Hi Bob") do when called in
+            a doTag() method?
+            <p>It will insert the text "Hi Bob" to response stream</p>
+        </li>
+        <li>What does the operation getJspBody().invoke(null) do when called in a doTag()
+            method? 
+            <p>This will get the body of custome tag then insert it to output stream</p>
+        </li>
+        
+    </ol>
+</body>
+
+</html>
