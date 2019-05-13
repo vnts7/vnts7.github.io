@@ -1,0 +1,74 @@
+<html>
+
+<head>
+  <title>JSP Custom Tags Quiz</title>
+  <style>
+    body {
+      font-family: Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 13px;
+    }
+
+    p {
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>JSP Custom Tags Quiz</h1>
+  <ol>
+    <li>What is the difference between the following 2 statements?
+      <pre>
+          setTimeout(booyah, 2000);
+          setTimeout(booyah(), 2000);
+      </pre>
+      <p>For the 2nd statement, whatever inside booyah() function will be execute immediately while 1st will be delayed
+        for 2 seconds</p>
+    </li>
+    <li>What do the following 2 alerts display (answer without running the code)?
+      <pre>
+        var myfunc = function(a, x) {
+          return a * x;
+        };
+        var x = myfunc(2, 3);
+        var y = myfunc;
+        alert(x);
+        alert(y(2,3));
+      </pre>
+      <p>Answer: 6 and 6</p>
+    </li>
+    <li>Write functions booyah1 and booyah2 so that in both cases below, an alert box comes up after 2 seconds that
+      says "BOOYAH!"
+      <pre>
+        setTimeout(booyah1, 2000);
+        setTimeout(booyah2(), 2000);
+      </pre>
+      <p>
+        Answer:
+        <pre>
+        function booyah1(){
+          alert("BOOYAH!");
+        }
+        function booyah2(){
+          return function(){
+            alert("BOOYAH!");
+          }
+        }
+        </pre>
+      </p>
+    </li>
+    <li>What is "Unobtrusive Javascript"? What is the practical application of Unobtrusive Javascript (and the reasons
+      for using it)?
+      <p>"Unobtrusive Javascript" is a best practice methodology for attaching JavaScript to the front-end of a website
+        that accomplish:
+      </p>
+      <ol>
+        <li>Separation of HTML and JavaScript (define your JavaScript in external JavaScript files)</li>
+        <li>Graceful degradation (important parts of the page still work with JavaScript disabled).</li>
+      </ol>
+      <p>Even though it's best practice, it was valid in 2011 but perhaps not in 2018 and beyond.</p>
+    </li>
+  </ol>
+</body>
+
+</html>
