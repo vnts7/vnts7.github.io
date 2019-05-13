@@ -14,12 +14,12 @@
     <div class="ctrls">
         <fieldset>
             <legend>Play Controls:</legend>
-            <button onclick="startClick(this)" id="btnStart">Start</button>
-            <button onclick="stopClick(this)" id="btnStop" disabled>Stop</button>
+            <button id="btnStart">Start</button>
+            <button id="btnStop" disabled>Stop</button>
         </fieldset>
         <fieldset>
             <legend>Animation:</legend>
-            <select onchange="animationChange(this)">
+            <select id="animation">
                 <option value="Blank" selected>Blank</option>
                 <option value="Custom">Custom</option>
                 <option value="Exercise">Exercise</option>
@@ -30,7 +30,7 @@
         </fieldset>
         <fieldset>
             <legend>Size:</legend>
-            <select onchange="sizeChange(this)">
+            <select id="size">
                 <option value="7pt">Tiny</option>
                 <option value="10pt">Small</option>
                 <option value="12pt" selected>Medium</option>
@@ -41,7 +41,7 @@
         </fieldset>
         <fieldset>
             <legend>Speed:</legend>
-            <label><input onchange="speedChange(this)" type="checkbox">Turbo</label>
+            <label><input type="checkbox" id="speed">Turbo</label>
         </fieldset>
     </div>
     <div class="fixme">
