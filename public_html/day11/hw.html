@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ASCIImation</title>
+    <meta charset="utf-8" />
+    <link href="hw.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <h1> CS472: ASCII Animation Viewer</h1>
+    <textarea id="text" cols="80" rows="20"></textarea>
+
+    <div class="ctrls">
+        <fieldset>
+            <legend>Play Controls:</legend>
+            <button onclick="startClick(this)" id="btnStart">Start</button>
+            <button onclick="stopClick(this)" id="btnStop" disabled>Stop</button>
+        </fieldset>
+        <fieldset>
+            <legend>Animation:</legend>
+            <select onchange="animationChange(this)">
+                <option value="Blank" selected>Blank</option>
+                <option value="Custom">Custom</option>
+                <option value="Exercise">Exercise</option>
+                <option value="Juggler">Juggler</option>
+                <option value="Bike">Bike</option>
+                <option value="Dive">Dive</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Size:</legend>
+            <select onchange="sizeChange(this)">
+                <option value="7pt">Tiny</option>
+                <option value="10pt">Small</option>
+                <option value="12pt" selected>Medium</option>
+                <option value="16pt">Large</option>
+                <option value="24pt">Extra Large</option>
+                <option value="32pt">XXL</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Speed:</legend>
+            <label><input onchange="speedChange(this)" type="checkbox">Turbo</label>
+        </fieldset>
+    </div>
+    <div class="fixme">
+        <a href="https://validator.w3.org/check/referer"><img src="w3c-html.png" alt="Valid HTML5" /></a><br />
+        <a href="https://jigsaw.w3.org/css-validator/check/referer"><img src="w3c-css.png" alt="Valid CSS" /></a><br />
+        <a href="https://webster.cs.washington.edu/jslint/?referer">
+            <img src="https://webster.cs.washington.edu/w3c-js.png" alt="Valid JS" />
+        </a>
+    </div>
+    <script src="animations.js"></script>
+    <script src="hw.js"></script>
+</body>
+
+</html>
