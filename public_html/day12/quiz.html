@@ -1,0 +1,152 @@
+<html>
+
+<head>
+    <title>Javascript Scope Exercises</title>
+    <style>
+        body {
+            font-family: Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 13px;
+        }
+
+        p {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Javascript Scope Exercises</h1>
+    <ol>
+        <li>Determine what this Javascript code will print out (without running it):
+            <pre>
+                x = 1;
+                var a = 5;
+                var b = 10;
+                var c = function(a, b, c) {
+                    var x = 10;
+                    document.write(x);
+                    document.write(a);
+                    var f = function(a, b, c) {
+                        b = a;
+                        document.write(b);
+                        b = c;
+                        var x = 5;
+                    }
+                    f(a,b,c);
+                    document.write(b);
+                }
+                c(8,9,10);
+                document.write(b);
+                document.write(x);
+            </pre>
+            <p>Answer: 10 8 8 9 10 1</p>
+        </li>
+        <li>What is the difference between a method and function?
+            <p>Method is a function when object is associated with it.</p>
+            <p>Function : When no object is associated with it , it comes to function.</p>
+        </li>
+        <li>What does 'this' refer to when used in a Java method?
+            <p>It refers to the object that contain the method</p>
+        </li>
+        <li>What does 'this' refer to when used in a JavaScript method?
+            <p>It refers to the object that the method associated to</p>
+        </li>
+        <li>What does 'this' refer to when used in a JavaScript constructor function?
+            <p>It refers to the newly created object</p>
+        </li>
+        <li>Assume object x is the prototype for object y in Javascript. Object x has a method f( ) containing keyword
+            'this'.
+            When f is called by x.f( ), what does 'this' refer to?
+            <p>refer to object x</p>
+        </li>
+        <li>What is a free variable in JavaScript?
+            <p>Free variables are simply the variables that are neither locally declared nor passed as parameter</p>
+            <p>In javascript closures, those are simply the variables that the function takes (read and write) in the enclosing scope where is declared the closure or in a parent scope.</p>
+        </li>
+        <li>Create an object that has properties with name = "fred" and major="music" and a property that is a function
+            that takes 2 numbers and returns the smallest of the two, or the square of the two if they are equal.
+            <p>Answer:</p>
+            <pre>
+            let o = {
+                name: 'fred',
+                major: 'music',
+                f: (n1, n2) => {
+                    if (n1 > n2) return n2;
+                    if (n2 > n1) return n1;
+                    return n1 * n2;
+                }
+            };
+            </pre>
+            <script>
+                let o = {
+                    name: 'fred',
+                    major: 'music',
+                    f: (n1, n2) => {
+                        if (n1 > n2) return n2;
+                        if (n2 > n1) return n1;
+                        return n1 * n2;
+                    }
+                };
+            </script>
+        </li>
+        <li>Write Javascript code for creating three Employee objects using the "new" keyword and a constructor
+            function.
+            Employee objects have the following fields: name, salary, position.
+            <p>Answer:</p>
+            <pre>
+            function Employee(name, salary, position) {
+                this.name = name;
+                this.salary = salary;
+                this.position = position;
+            }
+            let e1 = new Employee("A", 1000, "Manager");
+            let e2 = new Employee("B", 1000, "Manager");
+            let e3 = new Employee("C", 1000, "Manager");
+            </pre>
+            <script>
+                function Employee(name, salary, position) {
+                    this.name = name;
+                    this.salary = salary;
+                    this.position = position;
+                }
+                let e1 = new Employee("A", 1000, "Manager");
+                let e2 = new Employee("B", 1000, "Manager");
+                let e3 = new Employee("C", 1000, "Manager");
+            </script>
+        </li>
+        <li>Write a Javascript function that takes any number of input arguments and returns the product of the
+            arguments.
+            <p>Answer:</p>
+            <pre>
+            let product = () => {
+                var i;
+                var r = 1;
+                let l = arguments.length;
+                for (i = 0; i &lt; l; i++) {
+                    r *= arguments[i];
+                }
+                return r;
+            }
+            </pre>
+        </li>
+        <li>Write an arrow function that returns the maximum of its three input arguments.
+            <p>Answer:</p>
+            <pre>
+            let findMax = () => {
+                var i;
+                var max = -Infinity;
+                let l = Math.min(3,arguments.length);
+                for (i = 0; i &lt; l; i++) {
+                    if (arguments[i] > max) {
+                        max = arguments[i];
+                    }
+                }
+                return max;
+            }
+            </pre>
+        </li>
+
+    </ol>
+</body>
+
+</html>
