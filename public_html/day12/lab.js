@@ -16,14 +16,16 @@
      * @param {*} deposit amount of deposit
      * @returns {*} Bank account
      */
-    let createAcc = function (name, deposit) {
-        let accName = name;
-        let accDeposit = deposit;
-        return {
-            getName: () => accName,
-            getDeposit: () => accDeposit
+    let createAcc = (function () {
+        return function (name, deposit) {
+            let accName = name;
+            let accDeposit = deposit;
+            return {
+                getName: () => accName,
+                getDeposit: () => accDeposit
+            };
         };
-    };
+    })();
 
     /**
      * Handle create account button click
