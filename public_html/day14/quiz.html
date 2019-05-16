@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>jQuery Quiz I</title>
+    <style>
+        body {
+            font-family: Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 13px;
+        }
+
+        p {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>jQuery Quiz I</h1>
+    <ol>
+        <li>In jQuery terminology, what is the difference between the 'jQuery function' and the 'jQuery object'?
+            <p>jQuery function (usually <code>$</code> or <code>jQuery</code>) is a function that after execute will return a jQuery object</p>
+            <p>jQuery object in other hand usually contain 1 or more HTML elements and all the methods that manipulate those elements</p>
+        </li>
+        <li>Write jQuery code to find all h1 elements that are children of a div element and make their background
+            color red. <br>
+            Sample HTML:
+            <pre>
+            &lt;body&gt;
+            &lt;h1&gt;abc&lt;/h1&gt;&lt;br&gt;
+            &lt;div&gt;
+                &lt;h1&gt;div-1&lt;/h1&gt;
+                &lt;h1&gt;div-2&lt;/h1&gt;
+            &lt;/div&gt;
+            &lt;h1&gt;xyz&lt;/h1&gt;
+            &lt;/body&gt;
+            </pre>
+            <p>Answer:</p>
+            <pre>
+            $('div h1').css('background-color', 'red');
+            </pre>
+        </li>
+        <li> Use a jQuery method to insert the text "YES!" at the end of the <code>&lt;p></code> element.
+            <pre>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+            &lt;head&gt;
+            &lt;script&gt;
+                &lt;!&mdash;INSERT YOUR JQUERY CODE HERE - - &gt;
+            &lt;/script&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;p&gt;Is jQuery FUN or what? &lt;/p&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+            </pre>
+            <p>Answer:</p>
+            <pre>
+            $(document).ready(function(){
+                $('p').append('YES!');
+            });
+            </pre>
+        </li>
+    </ol>
+</body>
+
+</html>
