@@ -6,13 +6,13 @@ $(document).ready(function () {
     let youlost = function () {
         if (!started || lost) { return; }
         lost = true;
-        $('.boundary').css('background-color', 'red');
+        $('.boundary').addClass('youlose');
         $('#status').text('Sorry, you lost. :[');
     };
     $('#start').click(() => {
         started = true;
         lost = false;
-        $('.boundary').css('background-color', '#eeeeee');
+        $('.boundary').removeClass('youlose');
         $('#status').text('Move you mouse to the END area');
     });
     $('.boundary').mouseover(youlost);
