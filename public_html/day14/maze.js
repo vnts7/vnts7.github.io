@@ -3,23 +3,23 @@ $(document).ready(function () {
     'use strict';
     let started = false;
     let lost = false;
-    const delay = 10;
     let youlost = function () {
         if (!started || lost) { return; }
         lost = true;
         $('.boundary').css('background-color', 'red');
-        setTimeout(() => alert('Sorry, you lost. :['), delay);
+        $('#status').text('Sorry, you lost. :[');
     };
     $('#start').click(() => {
         started = true;
         lost = false;
         $('.boundary').css('background-color', '#eeeeee');
+        $('#status').text('Move you mouse to the END area');
     });
     $('.boundary').mouseover(youlost);
     $('#end').mouseover(function () {
         if (started && !lost) {
             started = false;
-            setTimeout(() => alert('You win! :]'), delay);
+            $('#status').text('You win! :]');
         }
     });
     $('#maze').mouseleave(youlost);
