@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <title>jQuery Quiz II</title>
+    <style>
+        body {
+            font-family: Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 13px;
+        }
+
+        p {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>jQuery Quiz II</h1>
+    <ol>
+        <li>Which, if any, of the following 3 code fragments are equivalent? Explain why they are different, if
+            they are. Explain why they can have different parameters and be equivalent, if they are equivalent.
+            <pre>
+            //code fragment 1
+            $("li").each(function(idx, e) {
+                $(e).css('color', 'yellow'); });
+            //code fragment 2
+            $("li").each(function() {
+                $(this).css('color', 'yellow'); });
+            //code fragment 3
+            $("li").each(function(idx) {
+                $(this).css('color', 'yellow'); });
+            </pre>
+            <p>Answer:3 of them are equivalent</p>
+        </li>
+        <li>Write a jQuery expression to find all divs on a page that include an unordered list in them, and make
+            their text color be blue.
+            <pre>
+            &lt;div&gt;no ul here &lt;/div&gt;
+            &lt;div&gt;
+                This does contain a ul.
+                &lt;ul&gt;
+                    &lt;li&gt;the first item&lt;/li&gt;
+                    &lt;li&gt;the second item&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;script&gt;
+                &lt;!&mdash;INSERT YOUR JQUERY CODE HERE - - &gt;
+            &lt;/script&gt;
+            </pre>
+            <p>Answer:$('div').has('ul').css({color:'blue'})</p>
+        </li>
+        <li>Write jQuery code to append the following div element (and all of its contents) dynamically to the body
+            element.
+            <br>
+            <code>&lt;div&gt;&lt;h1&gt;JQuery Core&lt;/h1&gt;&lt;/div&gt;</code>
+            <br>
+            HTML:
+            <pre>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+            &lt;head&gt;
+                &lt;meta charset=&quot;utf-8&quot;&gt;
+                &lt;title&gt;JS Bin&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            
+            &lt;/body&gt;
+            &lt;/html&gt; 
+            </pre>
+            <p>Answer:</p>
+        </li>
+    </ol>
+</body>
+
+</html>
