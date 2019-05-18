@@ -30,7 +30,7 @@
             $("li").each(function(idx) {
                 $(this).css('color', 'yellow'); });
             </pre>
-            <p>Answer:3 of them are equivalent</p>
+            <p>Answer:3 of them are equivalent, <code>idx</code> param is not used, so it does not matter. The 2nd param (<code>e</code>) is current element that same with <code>this</code></p>
         </li>
         <li>Write a jQuery expression to find all divs on a page that include an unordered list in them, and make
             their text color be blue.
@@ -47,7 +47,10 @@
                 &lt;!&mdash;INSERT YOUR JQUERY CODE HERE - - &gt;
             &lt;/script&gt;
             </pre>
-            <p>Answer:$('div').has('ul').css({color:'blue'})</p>
+            <p>Answer:</p>
+            <pre>
+            $('div').has('ul').css({color:'blue'});
+            </pre>
         </li>
         <li>Write jQuery code to append the following div element (and all of its contents) dynamically to the body
             element.
@@ -68,6 +71,9 @@
             &lt;/html&gt; 
             </pre>
             <p>Answer:</p>
+            <pre>
+            $('body').append('&lt;div&gt;&lt;h1&gt;JQuery Core&lt;/h1&gt;&lt;/div&gt;');
+            </pre>
         </li>
     </ol>
 </body>

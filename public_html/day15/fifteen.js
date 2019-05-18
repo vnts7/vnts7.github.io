@@ -99,5 +99,6 @@ let jQuery = window.jQuery;
             }
             shuffling = false;
         });
+        $('body').append('<div><h1>JQuery Core</h1></div>');
     });
 })(jQuery);
