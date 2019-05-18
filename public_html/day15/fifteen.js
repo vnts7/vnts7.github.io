@@ -1,4 +1,5 @@
 let jQuery = window.jQuery;
+jQuery.noConflict();
 (function ($) {
     'use strict';
     $(document).ready(function () {
