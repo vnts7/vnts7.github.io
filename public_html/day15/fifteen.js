@@ -1,7 +1,7 @@
 let jQuery = window.jQuery;
 (function ($) {
+    'use strict';
     $(document).ready(function () {
-        'use strict';
         const n = 4;
         const size = 100;
         let cx = n - 1;
@@ -79,8 +79,7 @@ let jQuery = window.jQuery;
             })
             .mouseout(function () {
                 $(this).removeClass('movablepiece');
-            })
-            ;
+            });
         /**
          * Handle shuffle
          */
@@ -92,7 +91,9 @@ let jQuery = window.jQuery;
                 let posibles = [
                     { x: cx - 1, y: cy }, { x: cx + 1, y: cy },
                     { x: cx, y: cy - 1 }, { x: cx, y: cy + 1 }];
-                posibles = posibles.filter(i => { return i.x >= 0 && i.x < n && i.y >= 0 && i.y < n; });
+                posibles = posibles.filter(i => {
+                    return i.x >= 0 && i.x < n && i.y >= 0 && i.y < n;
+                });
                 let nextPos = posibles[Math.floor(Math.random() * posibles.length)];
                 move.apply($('#puzzlepiece' + nextPos.x + '_' + nextPos.y)[0]);
                 numMove--;
