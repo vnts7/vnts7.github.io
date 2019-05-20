@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>text demo</title>
+    <style>
+        p {
+            color: blue;
+            margin: 8px;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+
+<body>
+    <p><span>Test</span> Paragraph.</p>
+    <p></p>
+    <ul class="level-1">
+        <li class="item-i">I</li>
+        <li class="item-ii">II
+            <ul class="level-2">
+                <li class="item-a">A</li>
+                <li class="item-b">B
+                    <ul class="level-3">
+                        <li class="item-1">1</li>
+                        <li class="item-2">2</li>
+                        <li class="item-3">3</li>
+                    </ul>
+                </li>
+                <li class="item-c">C</li>
+            </ul>
+        </li>
+        <li class="item-iii">III</li>
+    </ul>
+    <ul>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li class="third-item">list item 3</li>
+        <li>list item 4</li>
+        <li>list item 5</li>
+    </ul>
+    <div class="ancestors">
+        <div> (great-grandparent)
+            <ul> (grandparent)
+                <li> (direct parent)
+                    <span>some text</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $('p').first().html($('p').first().text());
+        $('.level-2').css('background-color', 'red');
+        $(document).ready(function () {
+            $('.third-item').prev().css('background-color', 'blue')
+        });
+        $('.turkey').replaceWith('<li class="mashed-potatoes">Mashed Potatoes</li>');
+        $('span:contains("some text")').parent().css('color','green').parent().css('color','green');
+    </script>
+</body>
+
+</html>
